@@ -20,7 +20,7 @@ version: "3.8"
 services:
   wizarr:
     container_name: wizarr
-    image: ghcr.io/wizarrrr/wizarr
+    image: ghcr.io/realashleybailey/wizarr-2
     #user: 1000:1000 #Optional but recommended, sets the user uid that Wizarr will run with
     ports:
       - 5690:5690
@@ -63,7 +63,7 @@ Then, restart all services defined in the Compose file:
   -p 5690:5690 \
   -v /path/to/appdata/config:/data/database \
   --restart unless-stopped \
-  ghcr.io/wizarrrr/wizarr
+  ghcr.io/realashleybailey/wizarr-2
 </code></pre>
 
 **Updating**
@@ -77,7 +77,7 @@ docker stop wizarr && docker rm wizarr
 Pull the latest image:
 
 ```bash
-docker pull ghcr.io/wizarrrr/wizarr
+docker pull ghcr.io/realashleybailey/wizarr-2
 ```
 
 Finally, run the container with the same parameters originally used to create the container:

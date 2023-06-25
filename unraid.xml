@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Wizarr</Name>
-  <Repository>ghcr.io/realashleybailey/wizarr</Repository>
+  <Repository>ghcr.io/realashleybailey/wizarr-2</Repository>
   <Registry>https://github.com/realashleybailey/wizarr-2/pkgs/container/wizarr</Registry>
   <TemplateURL>https://github.com/realashleybailey/wizarr-2/blob/master/unraid.xml</TemplateURL>
   <Network>bridge</Network>
