@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-16 17:27+0100\n"
+"POT-Creation-Date: 2023-06-25 16:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,35 +17,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/admin.py:150
+#: app/admin.py:162
 msgid "Passwords do not match."
 msgstr ""
 
-#: app/admin.py:153
+#: app/admin.py:165
 msgid "Username must be between 3 and 15 characters."
 msgstr ""
 
-#: app/admin.py:156
+#: app/admin.py:168
 msgid "Password must be between 3 and 40 characters."
 msgstr ""
 
-#: app/admin.py:182
+#: app/admin.py:196
 msgid "You must select at least one library."
 msgstr ""
 
-#: app/admin.py:251
+#: app/admin.py:273
 msgid "It is likely that your token does not work."
 msgstr ""
 
-#: app/admin.py:253
+#: app/admin.py:275
 msgid "Unable to connect to your Plex server. See Logs for more information."
 msgstr ""
 
-#: app/admin.py:262
+#: app/admin.py:284
 msgid "Unable to connect to your Jellyfin server."
 msgstr ""
 
-#: app/admin.py:343 app/admin.py:347
+#: app/admin.py:382 app/admin.py:386
 msgid "Invalid Username or Password"
 msgstr ""
 
@@ -122,6 +122,7 @@ msgid "Server"
 msgstr ""
 
 #: app/templates/settings.html:48
+#: app/templates/wizard/jellyfin/download.html:29
 msgid "Server URL"
 msgstr ""
 
@@ -141,29 +142,43 @@ msgstr ""
 msgid "Scan For Libraries"
 msgstr ""
 
-#: app/templates/settings.html:77
+#: app/templates/settings.html:78
 msgid ""
 "Request\n"
-"                instance (Ombi, Overseerr...) URL"
+"                Server"
 msgstr ""
 
-#: app/templates/settings.html:87
-msgid "Ombi API Key (Only used for user import currently.)"
+#: app/templates/settings.html:92
+msgid ""
+"Request\n"
+"                Server URL"
 msgstr ""
 
-#: app/templates/settings.html:94
+#: app/templates/settings.html:103
+msgid ""
+"Request\n"
+"                Server API Key"
+msgstr ""
+
+#: app/templates/settings.html:111
 msgid ""
 "Discord\n"
 "                Server ID"
 msgstr ""
 
-#: app/templates/settings.html:102
+#: app/templates/settings.html:119
+msgid ""
+"Discord\n"
+"                Widget"
+msgstr ""
+
+#: app/templates/settings.html:127
 msgid ""
 "Custom\n"
 "                HTML"
 msgstr ""
 
-#: app/templates/settings.html:110
+#: app/templates/settings.html:135
 msgid "Save"
 msgstr ""
 
@@ -370,27 +385,35 @@ msgstr ""
 msgid "New Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:60
+#: app/templates/modals/create-notification-agent.html:61
 msgid ""
 "Username\n"
 "                                (optional)"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:65
+#: app/templates/modals/create-notification-agent.html:66
 msgid "Password (optional)"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:70
+#: app/templates/modals/create-notification-agent.html:72
+msgid "User Key"
+msgstr ""
+
+#: app/templates/modals/create-notification-agent.html:76
+msgid "API Token"
+msgstr ""
+
+#: app/templates/modals/create-notification-agent.html:81
 msgid ""
 "Agent\n"
 "                                URL"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:81
+#: app/templates/modals/create-notification-agent.html:92
 msgid "Test & Create Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:85
+#: app/templates/modals/create-notification-agent.html:96
 msgid "Cancel"
 msgstr ""
 
@@ -479,15 +502,39 @@ msgid ""
 "        it with Jellyfin."
 msgstr ""
 
-#: app/templates/wizard/jellyfin/download.html:11
+#: app/templates/wizard/jellyfin/download.html:12
 msgid ""
 "Planning on watching Movies on this device? Download Jellyfin for this "
 "device."
 msgstr ""
 
-#: app/templates/wizard/jellyfin/download.html:14
-#: app/templates/wizard/plex/download.html:14
-msgid "Download"
+#: app/templates/wizard/jellyfin/download.html:18
+msgid ""
+"If you don't wish to Download the App feel free to use Jellyfin in your "
+"devices web browser, just click \"Next\"."
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:24
+msgid "Show Server URL"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:33
+#: app/templates/wizard/jellyfin/download.html:133
+msgid "Copy"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:47
+#: app/templates/wizard/jellyfin/download.html:64
+#: app/templates/wizard/jellyfin/tips.html:25
+msgid "Open Jellyfin"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:81
+msgid "Other Download"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:130
+msgid "Copied!"
 msgstr ""
 
 #: app/templates/wizard/jellyfin/tips.html:4
@@ -520,10 +567,6 @@ msgid ""
 "        you're ready to start streaming your media. It's that easy!"
 msgstr ""
 
-#: app/templates/wizard/jellyfin/tips.html:25
-msgid "Open Jellyfin"
-msgstr ""
-
 #: app/templates/wizard/plex/download.html:3
 msgid ""
 "Join & Download Plex\n"
@@ -539,6 +582,10 @@ msgstr ""
 
 #: app/templates/wizard/plex/download.html:11
 msgid "Planning on watching Movies on this device? Download Plex for this device."
+msgstr ""
+
+#: app/templates/wizard/plex/download.html:14
+msgid "Download"
 msgstr ""
 
 #: app/templates/wizard/plex/tips.html:4

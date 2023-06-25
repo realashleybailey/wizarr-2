@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-16 17:27+0100\n"
+"POT-Creation-Date: 2023-06-25 16:15+0000\n"
 "PO-Revision-Date: 2023-03-15 13:38+0000\n"
 "Last-Translator: thu3n <elias.thuen@gmail.com>\n"
 "Language: sv\n"
@@ -19,37 +19,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/admin.py:150
+#: app/admin.py:162
 msgid "Passwords do not match."
 msgstr "Lösenorden matchar inte."
 
-#: app/admin.py:153
+#: app/admin.py:165
 msgid "Username must be between 3 and 15 characters."
 msgstr "Användarnamnet måste vara mellan 3 och 15 tecken."
 
-#: app/admin.py:156
+#: app/admin.py:168
 msgid "Password must be between 3 and 40 characters."
 msgstr "Lösenordet måste vara mellan 3 och 40 tecken."
 
-#: app/admin.py:182
+#: app/admin.py:196
 msgid "You must select at least one library."
 msgstr "Du måste välja minst ett bibliotek."
 
-#: app/admin.py:251
+#: app/admin.py:273
 msgid "It is likely that your token does not work."
 msgstr "Det verkar som att ditt Plex-token inte fungerar."
 
-#: app/admin.py:253
+#: app/admin.py:275
 msgid "Unable to connect to your Plex server. See Logs for more information."
 msgstr "Kan inte ansluta till din Plex-server. Se loggarna för mer information."
 
-#: app/admin.py:262
+#: app/admin.py:284
 msgid "Unable to connect to your Jellyfin server."
 msgstr ""
 "Kan inte ansluta till din Jellyfin-server. Se loggarna för mer "
 "information."
 
-#: app/admin.py:343 app/admin.py:347
+#: app/admin.py:382 app/admin.py:386
 msgid "Invalid Username or Password"
 msgstr "Felaktigt användarnamn eller lösenord"
 
@@ -131,6 +131,7 @@ msgid "Server"
 msgstr "Server adress"
 
 #: app/templates/settings.html:48
+#: app/templates/wizard/jellyfin/download.html:29
 msgid "Server URL"
 msgstr "Server adress"
 
@@ -154,20 +155,34 @@ msgstr ""
 msgid "Scan For Libraries"
 msgstr "Skanna för bibliotek"
 
-#: app/templates/settings.html:77
+#: app/templates/settings.html:78
 #, fuzzy
 msgid ""
 "Request\n"
-"                instance (Ombi, Overseerr...) URL"
+"                Server"
 msgstr ""
-"Förfrågningar\n"
-"                exempel (Ombi, Overseerr...)"
+"Discord\n"
+"                Server ID"
 
-#: app/templates/settings.html:87
-msgid "Ombi API Key (Only used for user import currently.)"
+#: app/templates/settings.html:92
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server URL"
 msgstr ""
+"Discord\n"
+"                Server ID"
 
-#: app/templates/settings.html:94
+#: app/templates/settings.html:103
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server API Key"
+msgstr ""
+"Discord\n"
+"                Server ID"
+
+#: app/templates/settings.html:111
 msgid ""
 "Discord\n"
 "                Server ID"
@@ -175,7 +190,16 @@ msgstr ""
 "Discord\n"
 "                Server ID"
 
-#: app/templates/settings.html:102
+#: app/templates/settings.html:119
+#, fuzzy
+msgid ""
+"Discord\n"
+"                Widget"
+msgstr ""
+"Discord\n"
+"                Server ID"
+
+#: app/templates/settings.html:127
 msgid ""
 "Custom\n"
 "                HTML"
@@ -183,7 +207,7 @@ msgstr ""
 "Anpassad\n"
 "                HTML"
 
-#: app/templates/settings.html:110
+#: app/templates/settings.html:135
 msgid "Save"
 msgstr "Spara"
 
@@ -404,7 +428,7 @@ msgstr " Något har gått fel. Vänligen försök igen senare."
 msgid "New Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:60
+#: app/templates/modals/create-notification-agent.html:61
 #, fuzzy
 msgid ""
 "Username\n"
@@ -413,12 +437,21 @@ msgstr ""
 "Inbjudnings\n"
 "                                kod"
 
-#: app/templates/modals/create-notification-agent.html:65
+#: app/templates/modals/create-notification-agent.html:66
 #, fuzzy
 msgid "Password (optional)"
 msgstr "(valfritt)"
 
-#: app/templates/modals/create-notification-agent.html:70
+#: app/templates/modals/create-notification-agent.html:72
+#, fuzzy
+msgid "User Key"
+msgstr "Användarnamn"
+
+#: app/templates/modals/create-notification-agent.html:76
+msgid "API Token"
+msgstr ""
+
+#: app/templates/modals/create-notification-agent.html:81
 #, fuzzy
 msgid ""
 "Agent\n"
@@ -427,11 +460,11 @@ msgstr ""
 "Inbjudnings\n"
 "                                kod"
 
-#: app/templates/modals/create-notification-agent.html:81
+#: app/templates/modals/create-notification-agent.html:92
 msgid "Test & Create Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:85
+#: app/templates/modals/create-notification-agent.html:96
 msgid "Cancel"
 msgstr ""
 
@@ -534,7 +567,7 @@ msgstr ""
 "Låt oss se till att du vet hur du använder det\n"
 "        med Jellyfin."
 
-#: app/templates/wizard/jellyfin/download.html:11
+#: app/templates/wizard/jellyfin/download.html:12
 msgid ""
 "Planning on watching Movies on this device? Download Jellyfin for this "
 "device."
@@ -542,10 +575,36 @@ msgstr ""
 "Kommer du att titta på filmer och serier på den här enheten? Ladda ner "
 "Jellyfin för denna enhet här."
 
-#: app/templates/wizard/jellyfin/download.html:14
-#: app/templates/wizard/plex/download.html:14
-msgid "Download"
+#: app/templates/wizard/jellyfin/download.html:18
+msgid ""
+"If you don't wish to Download the App feel free to use Jellyfin in your "
+"devices web browser, just click \"Next\"."
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:24
+#, fuzzy
+msgid "Show Server URL"
+msgstr "Server adress"
+
+#: app/templates/wizard/jellyfin/download.html:33
+#: app/templates/wizard/jellyfin/download.html:133
+msgid "Copy"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:47
+#: app/templates/wizard/jellyfin/download.html:64
+#: app/templates/wizard/jellyfin/tips.html:25
+msgid "Open Jellyfin"
+msgstr "Öppna Jellyfin"
+
+#: app/templates/wizard/jellyfin/download.html:81
+#, fuzzy
+msgid "Other Download"
 msgstr "Ladda ner"
+
+#: app/templates/wizard/jellyfin/download.html:130
+msgid "Copied!"
+msgstr ""
 
 #: app/templates/wizard/jellyfin/tips.html:4
 msgid "Eh, So, What is Jellyfin exactly?"
@@ -589,10 +648,6 @@ msgstr ""
 "Allt du behöver göra är att leta reda på var Jellyfin appar finns. \n"
 "Logga sedan in med ditt konto, så är du redo att strömma!"
 
-#: app/templates/wizard/jellyfin/tips.html:25
-msgid "Open Jellyfin"
-msgstr "Öppna Jellyfin"
-
 #: app/templates/wizard/plex/download.html:3
 msgid ""
 "Join & Download Plex\n"
@@ -616,6 +671,10 @@ msgid "Planning on watching Movies on this device? Download Plex for this device
 msgstr ""
 "Kommer du att titta på filmer och serier på den här enheten? Ladda ner "
 "Plex här."
+
+#: app/templates/wizard/plex/download.html:14
+msgid "Download"
+msgstr "Ladda ner"
 
 #: app/templates/wizard/plex/tips.html:4
 msgid "Eh, So, What is Plex exactly?"
@@ -1054,7 +1113,9 @@ msgstr "Öppna Plex"
 #~ msgid ""
 #~ "Environment Variables are being\n"
 #~ "                    deprecated and replaced by"
-#~ " a secure sign-up. Please visit \n\n"
+#~ " a secure sign-up. Please visit \n"
+#~ ""
+#~ "\n"
 #~ msgstr ""
 #~ "Miljövariabler fasas ut och ersätts av"
 #~ " en säker registrering. Vänligen besök"
@@ -1123,4 +1184,14 @@ msgstr "Öppna Plex"
 
 #~ msgid "Home User"
 #~ msgstr "Hemma användare"
+
+#~ msgid ""
+#~ "Request\n"
+#~ "                instance (Ombi, Overseerr...) URL"
+#~ msgstr ""
+#~ "Förfrågningar\n"
+#~ "                exempel (Ombi, Overseerr...)"
+
+#~ msgid "Ombi API Key (Only used for user import currently.)"
+#~ msgstr ""
 

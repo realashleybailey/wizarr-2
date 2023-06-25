@@ -7,58 +7,49 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2023-05-16 17:27+0100\n"
-"PO-Revision-Date: 2023-02-26 23:30+0000\n"
-=======
-"POT-Creation-Date: 2023-02-27 18:41+0000\n"
+"POT-Creation-Date: 2023-06-25 16:15+0000\n"
 "PO-Revision-Date: 2023-05-15 18:52+0000\n"
->>>>>>> 2a70cacdc6431b40eb4cf75fd90923b411cee55a
 "Last-Translator: Bernat <btqqryrzo@mozmail.com>\n"
-"Language-Team: Catalan <https://hosted.weblate.org/projects/wizarr/app/ca/>\n"
 "Language: ca\n"
+"Language-Team: Catalan "
+"<https://hosted.weblate.org/projects/wizarr/app/ca/>\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-<<<<<<< HEAD
 "Generated-By: Babel 2.12.1\n"
-=======
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.18-dev\n"
-"Generated-By: Babel 2.11.0\n"
->>>>>>> 2a70cacdc6431b40eb4cf75fd90923b411cee55a
 
-#: app/admin.py:150
+#: app/admin.py:162
 msgid "Passwords do not match."
 msgstr "Les contrassenyes no coincideixen."
 
-#: app/admin.py:153
+#: app/admin.py:165
 msgid "Username must be between 3 and 15 characters."
 msgstr "El nom d'usuari ha de tenir entre 3 i 15 caràcters."
 
-#: app/admin.py:156
+#: app/admin.py:168
 msgid "Password must be between 3 and 40 characters."
 msgstr "La contrassenya ha de tenir entre 3 i 40 caràcters."
 
-#: app/admin.py:182
+#: app/admin.py:196
 msgid "You must select at least one library."
 msgstr "Has de seleccionar almenys una biblioteca."
 
-#: app/admin.py:251
+#: app/admin.py:273
 msgid "It is likely that your token does not work."
 msgstr "És probable que el teu token no funcioni."
 
-#: app/admin.py:253
+#: app/admin.py:275
 msgid "Unable to connect to your Plex server. See Logs for more information."
 msgstr ""
 "Impossible conectar-se al teu servidor de Plex. Mira els Logs per a més "
 "informació."
 
-#: app/admin.py:262
+#: app/admin.py:284
 msgid "Unable to connect to your Jellyfin server."
 msgstr "Impossible conectar-se al teu servidor de Jellyfin."
 
-#: app/admin.py:343 app/admin.py:347
+#: app/admin.py:382 app/admin.py:386
 msgid "Invalid Username or Password"
 msgstr "Nom d'usuari o contrassenya incorrecte"
 
@@ -121,12 +112,8 @@ msgstr "Confirma la contrassenya"
 msgid "Create an account"
 msgstr "Crea un compte"
 
-<<<<<<< HEAD
 #: app/templates/settings.html:9
 #, fuzzy
-=======
-#: app/templates/settings.html:7
->>>>>>> 2a70cacdc6431b40eb4cf75fd90923b411cee55a
 msgid "Server Settings"
 msgstr "Configuració del servidor"
 
@@ -138,16 +125,13 @@ msgstr ""
 "Nom públic\n"
 "del servidor"
 
-<<<<<<< HEAD
 #: app/templates/settings.html:35
 #, fuzzy
-=======
-#: app/templates/settings.html:19
->>>>>>> 2a70cacdc6431b40eb4cf75fd90923b411cee55a
 msgid "Server"
 msgstr "Servidor"
 
 #: app/templates/settings.html:48
+#: app/templates/wizard/jellyfin/download.html:29
 msgid "Server URL"
 msgstr "URL del servidor"
 
@@ -171,20 +155,34 @@ msgstr ""
 msgid "Scan For Libraries"
 msgstr "Busca biblioteques"
 
-#: app/templates/settings.html:77
+#: app/templates/settings.html:78
 #, fuzzy
 msgid ""
 "Request\n"
-"                instance (Ombi, Overseerr...) URL"
+"                Server"
 msgstr ""
-"Sol·licita\n"
-"instància (Ombi, Overseerr...)"
+"ID del\n"
+"servidor de Discord"
 
-#: app/templates/settings.html:87
-msgid "Ombi API Key (Only used for user import currently.)"
-msgstr "Clau API Ombi (Només usada per importar usuaris)"
+#: app/templates/settings.html:92
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server URL"
+msgstr ""
+"ID del\n"
+"servidor de Discord"
 
-#: app/templates/settings.html:94
+#: app/templates/settings.html:103
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server API Key"
+msgstr ""
+"ID del\n"
+"servidor de Discord"
+
+#: app/templates/settings.html:111
 msgid ""
 "Discord\n"
 "                Server ID"
@@ -192,7 +190,16 @@ msgstr ""
 "ID del\n"
 "servidor de Discord"
 
-#: app/templates/settings.html:102
+#: app/templates/settings.html:119
+#, fuzzy
+msgid ""
+"Discord\n"
+"                Widget"
+msgstr ""
+"ID del\n"
+"servidor de Discord"
+
+#: app/templates/settings.html:127
 msgid ""
 "Custom\n"
 "                HTML"
@@ -200,7 +207,7 @@ msgstr ""
 "HTML\n"
 "personalitzat"
 
-#: app/templates/settings.html:110
+#: app/templates/settings.html:135
 msgid "Save"
 msgstr "Guardar"
 
@@ -421,7 +428,7 @@ msgstr " Alguna cosa ha anat malament. Si us plau, intenta-ho més tard."
 msgid "New Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:60
+#: app/templates/modals/create-notification-agent.html:61
 #, fuzzy
 msgid ""
 "Username\n"
@@ -430,12 +437,21 @@ msgstr ""
 "Codi\n"
 "d'invitació"
 
-#: app/templates/modals/create-notification-agent.html:65
+#: app/templates/modals/create-notification-agent.html:66
 #, fuzzy
 msgid "Password (optional)"
 msgstr "(opcional)"
 
-#: app/templates/modals/create-notification-agent.html:70
+#: app/templates/modals/create-notification-agent.html:72
+#, fuzzy
+msgid "User Key"
+msgstr "Política d'usuari"
+
+#: app/templates/modals/create-notification-agent.html:76
+msgid "API Token"
+msgstr ""
+
+#: app/templates/modals/create-notification-agent.html:81
 #, fuzzy
 msgid ""
 "Agent\n"
@@ -444,11 +460,11 @@ msgstr ""
 "Codi\n"
 "d'invitació"
 
-#: app/templates/modals/create-notification-agent.html:81
+#: app/templates/modals/create-notification-agent.html:92
 msgid "Test & Create Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:85
+#: app/templates/modals/create-notification-agent.html:96
 msgid "Cancel"
 msgstr ""
 
@@ -549,7 +565,7 @@ msgstr ""
 "servidor. Assegurem-nos que saps com\n"
 "utilitzar-la amb Jellyfin."
 
-#: app/templates/wizard/jellyfin/download.html:11
+#: app/templates/wizard/jellyfin/download.html:12
 msgid ""
 "Planning on watching Movies on this device? Download Jellyfin for this "
 "device."
@@ -557,10 +573,36 @@ msgstr ""
 "Estàs pensant en veure pel·lícules en aquest dispositiu? Baixa Jellyfin "
 "per a aquest dispositiu."
 
-#: app/templates/wizard/jellyfin/download.html:14
-#: app/templates/wizard/plex/download.html:14
-msgid "Download"
+#: app/templates/wizard/jellyfin/download.html:18
+msgid ""
+"If you don't wish to Download the App feel free to use Jellyfin in your "
+"devices web browser, just click \"Next\"."
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:24
+#, fuzzy
+msgid "Show Server URL"
+msgstr "URL del servidor"
+
+#: app/templates/wizard/jellyfin/download.html:33
+#: app/templates/wizard/jellyfin/download.html:133
+msgid "Copy"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:47
+#: app/templates/wizard/jellyfin/download.html:64
+#: app/templates/wizard/jellyfin/tips.html:25
+msgid "Open Jellyfin"
+msgstr "Obrir Jellyfin"
+
+#: app/templates/wizard/jellyfin/download.html:81
+#, fuzzy
+msgid "Other Download"
 msgstr "Baixa"
+
+#: app/templates/wizard/jellyfin/download.html:130
+msgid "Copied!"
+msgstr ""
 
 #: app/templates/wizard/jellyfin/tips.html:4
 msgid "Eh, So, What is Jellyfin exactly?"
@@ -606,10 +648,6 @@ msgstr ""
 "i\n"
 "ja estaràs preparat per començar a veure els teus mitjans. Així de fàcil!"
 
-#: app/templates/wizard/jellyfin/tips.html:25
-msgid "Open Jellyfin"
-msgstr "Obrir Jellyfin"
-
 #: app/templates/wizard/plex/download.html:3
 msgid ""
 "Join & Download Plex\n"
@@ -633,6 +671,10 @@ msgid "Planning on watching Movies on this device? Download Plex for this device
 msgstr ""
 "Estàs pensant en veure pel·lícules en aquest dispositiu? Baixa Plex per a"
 " aquest dispositiu."
+
+#: app/templates/wizard/plex/download.html:14
+msgid "Download"
+msgstr "Baixa"
 
 #: app/templates/wizard/plex/tips.html:4
 msgid "Eh, So, What is Plex exactly?"
@@ -824,7 +866,6 @@ msgstr "Obre Plex"
 
 #~ msgid "Great!"
 #~ msgstr "Genial!"
-<<<<<<< HEAD
 
 #~ msgid "Change Server Settings"
 #~ msgstr "Canvia la configuració del servidor"
@@ -838,5 +879,13 @@ msgstr "Obre Plex"
 #~ msgid "Home User"
 #~ msgstr "Usuari local"
 
-=======
->>>>>>> 2a70cacdc6431b40eb4cf75fd90923b411cee55a
+#~ msgid ""
+#~ "Request\n"
+#~ "                instance (Ombi, Overseerr...) URL"
+#~ msgstr ""
+#~ "Sol·licita\n"
+#~ "instància (Ombi, Overseerr...)"
+
+#~ msgid "Ombi API Key (Only used for user import currently.)"
+#~ msgstr "Clau API Ombi (Només usada per importar usuaris)"
+

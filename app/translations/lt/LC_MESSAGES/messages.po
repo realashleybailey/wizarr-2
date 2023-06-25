@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-16 17:27+0100\n"
+"POT-Creation-Date: 2023-06-25 16:15+0000\n"
 "PO-Revision-Date: 2023-02-27 21:14+0000\n"
 "Last-Translator: Luke Keude <kingrun424@gmail.com>\n"
 "Language: lt\n"
@@ -21,37 +21,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/admin.py:150
+#: app/admin.py:162
 msgid "Passwords do not match."
 msgstr "Slaptažodžiai nesutampa."
 
-#: app/admin.py:153
+#: app/admin.py:165
 msgid "Username must be between 3 and 15 characters."
 msgstr "Slapyvardis turi buti tarp 3 ir 15 simbolių."
 
-#: app/admin.py:156
+#: app/admin.py:168
 msgid "Password must be between 3 and 40 characters."
 msgstr "Slaptažodis turi buti tarp 3 ir 40 simbolių."
 
-#: app/admin.py:182
+#: app/admin.py:196
 msgid "You must select at least one library."
 msgstr "Turite pasirinkti bent vieną biblioteką."
 
-#: app/admin.py:251
+#: app/admin.py:273
 msgid "It is likely that your token does not work."
 msgstr "Tikėtina, kad jūsų prieigos raktas neveikiantis."
 
-#: app/admin.py:253
+#: app/admin.py:275
 msgid "Unable to connect to your Plex server. See Logs for more information."
 msgstr ""
 "Nepavyko prisijungti prie jūsų „Plex“ serverio. Daugiau informacijos "
 "rasite žurnalo duomenyse."
 
-#: app/admin.py:262
+#: app/admin.py:284
 msgid "Unable to connect to your Jellyfin server."
 msgstr "Nepavyko prisijungti prie jūsų „Jellyfin“ serverio."
 
-#: app/admin.py:343 app/admin.py:347
+#: app/admin.py:382 app/admin.py:386
 msgid "Invalid Username or Password"
 msgstr "Neteisingas Prisijungimo vardas arba Slaptažodis"
 
@@ -131,6 +131,7 @@ msgid "Server"
 msgstr "Serveris"
 
 #: app/templates/settings.html:48
+#: app/templates/wizard/jellyfin/download.html:29
 msgid "Server URL"
 msgstr "Serverio nuoroda"
 
@@ -154,20 +155,34 @@ msgstr ""
 msgid "Scan For Libraries"
 msgstr "Ieškoti bibliotekų"
 
-#: app/templates/settings.html:77
+#: app/templates/settings.html:78
 #, fuzzy
 msgid ""
 "Request\n"
-"                instance (Ombi, Overseerr...) URL"
+"                Server"
 msgstr ""
-"Prašymų \n"
-"              serveris (Ombi, Overseerr...)"
+"Discord\n"
+"                Serverio ID"
 
-#: app/templates/settings.html:87
-msgid "Ombi API Key (Only used for user import currently.)"
-msgstr "Ombi Prieigos raktas (kolkas naudojamas tik vartotojų importui.)"
+#: app/templates/settings.html:92
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server URL"
+msgstr ""
+"Discord\n"
+"                Serverio ID"
 
-#: app/templates/settings.html:94
+#: app/templates/settings.html:103
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server API Key"
+msgstr ""
+"Discord\n"
+"                Serverio ID"
+
+#: app/templates/settings.html:111
 msgid ""
 "Discord\n"
 "                Server ID"
@@ -175,7 +190,16 @@ msgstr ""
 "Discord\n"
 "                Serverio ID"
 
-#: app/templates/settings.html:102
+#: app/templates/settings.html:119
+#, fuzzy
+msgid ""
+"Discord\n"
+"                Widget"
+msgstr ""
+"Discord\n"
+"                Serverio ID"
+
+#: app/templates/settings.html:127
 msgid ""
 "Custom\n"
 "                HTML"
@@ -183,7 +207,7 @@ msgstr ""
 "Parinktinis\n"
 "              HTML"
 
-#: app/templates/settings.html:110
+#: app/templates/settings.html:135
 msgid "Save"
 msgstr "Išsaugoti"
 
@@ -404,7 +428,7 @@ msgstr " Kažkas ne taip. Pabandykite dar kartą vėliau."
 msgid "New Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:60
+#: app/templates/modals/create-notification-agent.html:61
 #, fuzzy
 msgid ""
 "Username\n"
@@ -413,12 +437,21 @@ msgstr ""
 "Pakvietimo\n"
 "                                Kodas"
 
-#: app/templates/modals/create-notification-agent.html:65
+#: app/templates/modals/create-notification-agent.html:66
 #, fuzzy
 msgid "Password (optional)"
 msgstr "(neprivaloma)"
 
-#: app/templates/modals/create-notification-agent.html:70
+#: app/templates/modals/create-notification-agent.html:72
+#, fuzzy
+msgid "User Key"
+msgstr "Vartotojų politika"
+
+#: app/templates/modals/create-notification-agent.html:76
+msgid "API Token"
+msgstr ""
+
+#: app/templates/modals/create-notification-agent.html:81
 #, fuzzy
 msgid ""
 "Agent\n"
@@ -427,11 +460,11 @@ msgstr ""
 "Pakvietimo\n"
 "                                Kodas"
 
-#: app/templates/modals/create-notification-agent.html:81
+#: app/templates/modals/create-notification-agent.html:92
 msgid "Test & Create Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:85
+#: app/templates/modals/create-notification-agent.html:96
 msgid "Cancel"
 msgstr ""
 
@@ -531,7 +564,7 @@ msgstr ""
 "kolekcijos. Įsitikinkime, kad žinote, kaip jį naudoti\n"
 "        su „Jellyfin“."
 
-#: app/templates/wizard/jellyfin/download.html:11
+#: app/templates/wizard/jellyfin/download.html:12
 msgid ""
 "Planning on watching Movies on this device? Download Jellyfin for this "
 "device."
@@ -539,10 +572,36 @@ msgstr ""
 "Planuojate žiūrėti filmus šiuo įrenginiu? Atsisiųskite „Jellyfin“ šiam "
 "įrenginiui."
 
-#: app/templates/wizard/jellyfin/download.html:14
-#: app/templates/wizard/plex/download.html:14
-msgid "Download"
+#: app/templates/wizard/jellyfin/download.html:18
+msgid ""
+"If you don't wish to Download the App feel free to use Jellyfin in your "
+"devices web browser, just click \"Next\"."
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:24
+#, fuzzy
+msgid "Show Server URL"
+msgstr "Serverio nuoroda"
+
+#: app/templates/wizard/jellyfin/download.html:33
+#: app/templates/wizard/jellyfin/download.html:133
+msgid "Copy"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:47
+#: app/templates/wizard/jellyfin/download.html:64
+#: app/templates/wizard/jellyfin/tips.html:25
+msgid "Open Jellyfin"
+msgstr "Atidaryti \"Jellyfin\""
+
+#: app/templates/wizard/jellyfin/download.html:81
+#, fuzzy
+msgid "Other Download"
 msgstr "Parsisiųsti"
+
+#: app/templates/wizard/jellyfin/download.html:130
+msgid "Copied!"
+msgstr ""
 
 #: app/templates/wizard/jellyfin/tips.html:4
 msgid "Eh, So, What is Jellyfin exactly?"
@@ -590,10 +649,6 @@ msgstr ""
 "        ir\n"
 "    būsite pasiruošę pradėti transliuoti mediją. Tai taip paprasta!"
 
-#: app/templates/wizard/jellyfin/tips.html:25
-msgid "Open Jellyfin"
-msgstr "Atidaryti \"Jellyfin\""
-
 #: app/templates/wizard/plex/download.html:3
 msgid ""
 "Join & Download Plex\n"
@@ -617,6 +672,10 @@ msgid "Planning on watching Movies on this device? Download Plex for this device
 msgstr ""
 "Planuojate žiūrėti filmus šiuo įrenginiu? Atsisiųskite „Plex“ šiam "
 "įrenginiui."
+
+#: app/templates/wizard/plex/download.html:14
+msgid "Download"
+msgstr "Parsisiųsti"
 
 #: app/templates/wizard/plex/tips.html:4
 msgid "Eh, So, What is Plex exactly?"
@@ -1113,4 +1172,14 @@ msgstr "Atidaryti \"Plex\""
 
 #~ msgid "Home User"
 #~ msgstr "Namų vartotojas"
+
+#~ msgid ""
+#~ "Request\n"
+#~ "                instance (Ombi, Overseerr...) URL"
+#~ msgstr ""
+#~ "Prašymų \n"
+#~ "              serveris (Ombi, Overseerr...)"
+
+#~ msgid "Ombi API Key (Only used for user import currently.)"
+#~ msgstr "Ombi Prieigos raktas (kolkas naudojamas tik vartotojų importui.)"
 

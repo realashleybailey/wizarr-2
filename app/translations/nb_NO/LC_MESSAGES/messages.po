@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-16 17:27+0100\n"
+"POT-Creation-Date: 2023-06-25 16:15+0000\n"
 "PO-Revision-Date: 2023-05-08 06:07+0000\n"
 "Last-Translator: NorGyptian <samy.a.14@hotmail.com>\n"
 "Language: nb_NO\n"
@@ -19,35 +19,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/admin.py:150
+#: app/admin.py:162
 msgid "Passwords do not match."
 msgstr "Passordene samsvarer ikke."
 
-#: app/admin.py:153
+#: app/admin.py:165
 msgid "Username must be between 3 and 15 characters."
 msgstr "Brukernavn må være mellom 3 og 15 tegn."
 
-#: app/admin.py:156
+#: app/admin.py:168
 msgid "Password must be between 3 and 40 characters."
 msgstr "Passord må være mellom 3 og 40 tegn."
 
-#: app/admin.py:182
+#: app/admin.py:196
 msgid "You must select at least one library."
 msgstr "Du må velge minst ett bibliotek."
 
-#: app/admin.py:251
+#: app/admin.py:273
 msgid "It is likely that your token does not work."
 msgstr "Det er sannsynlig at symbolet ditt ikke virker."
 
-#: app/admin.py:253
+#: app/admin.py:275
 msgid "Unable to connect to your Plex server. See Logs for more information."
 msgstr "Kunne ikke koble til din Plex-tjener. Sjekk loggføringen for mer info."
 
-#: app/admin.py:262
+#: app/admin.py:284
 msgid "Unable to connect to your Jellyfin server."
 msgstr "Kunne ikke koble til din Jellyfin-tjener. Sjekk loggføringen for mer info."
 
-#: app/admin.py:343 app/admin.py:347
+#: app/admin.py:382 app/admin.py:386
 msgid "Invalid Username or Password"
 msgstr "Ugyldig brukernavn eller passord"
 
@@ -130,6 +130,7 @@ msgid "Server"
 msgstr "Aldri"
 
 #: app/templates/settings.html:48
+#: app/templates/wizard/jellyfin/download.html:29
 msgid "Server URL"
 msgstr ""
 
@@ -155,30 +156,51 @@ msgstr ""
 msgid "Scan For Libraries"
 msgstr "Se etter bibliotek"
 
-#: app/templates/settings.html:77
+#: app/templates/settings.html:78
 #, fuzzy
 msgid ""
 "Request\n"
-"                instance (Ombi, Overseerr...) URL"
+"                Server"
 msgstr "Forespørselsinstans (Ombi, Overseerr …)"
 
-#: app/templates/settings.html:87
-msgid "Ombi API Key (Only used for user import currently.)"
-msgstr ""
+#: app/templates/settings.html:92
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server URL"
+msgstr "Forespørselsinstans (Ombi, Overseerr …)"
 
-#: app/templates/settings.html:94
+#: app/templates/settings.html:103
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server API Key"
+msgstr ""
+"Plex\n"
+"              Token"
+
+#: app/templates/settings.html:111
 msgid ""
 "Discord\n"
 "                Server ID"
 msgstr ""
 
-#: app/templates/settings.html:102
+#: app/templates/settings.html:119
+#, fuzzy
+msgid ""
+"Discord\n"
+"                Widget"
+msgstr ""
+"Plex\n"
+"              Bibliotek"
+
+#: app/templates/settings.html:127
 msgid ""
 "Custom\n"
 "                HTML"
 msgstr ""
 
-#: app/templates/settings.html:110
+#: app/templates/settings.html:135
 msgid "Save"
 msgstr "Lagre"
 
@@ -394,7 +416,7 @@ msgstr " Noe har gått galt. Prøv igjen senere."
 msgid "New Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:60
+#: app/templates/modals/create-notification-agent.html:61
 #, fuzzy
 msgid ""
 "Username\n"
@@ -403,12 +425,21 @@ msgstr ""
 "Plex\n"
 "              Bibliotek"
 
-#: app/templates/modals/create-notification-agent.html:65
+#: app/templates/modals/create-notification-agent.html:66
 #, fuzzy
 msgid "Password (optional)"
 msgstr "(valgfritt)"
 
-#: app/templates/modals/create-notification-agent.html:70
+#: app/templates/modals/create-notification-agent.html:72
+#, fuzzy
+msgid "User Key"
+msgstr "Brukernavn"
+
+#: app/templates/modals/create-notification-agent.html:76
+msgid "API Token"
+msgstr ""
+
+#: app/templates/modals/create-notification-agent.html:81
 #, fuzzy
 msgid ""
 "Agent\n"
@@ -417,11 +448,11 @@ msgstr ""
 "Plex\n"
 "              Bibliotek"
 
-#: app/templates/modals/create-notification-agent.html:81
+#: app/templates/modals/create-notification-agent.html:92
 msgid "Test & Create Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:85
+#: app/templates/modals/create-notification-agent.html:96
 msgid "Cancel"
 msgstr ""
 
@@ -529,17 +560,42 @@ msgstr ""
 "oss at du vet hvordan du bruker \n"
 "den med Plex."
 
-#: app/templates/wizard/jellyfin/download.html:11
+#: app/templates/wizard/jellyfin/download.html:12
 #, fuzzy
 msgid ""
 "Planning on watching Movies on this device? Download Jellyfin for this "
 "device."
 msgstr "Planlegger du å se filmer på denne enheten? Last ned Plex."
 
-#: app/templates/wizard/jellyfin/download.html:14
-#: app/templates/wizard/plex/download.html:14
-msgid "Download"
+#: app/templates/wizard/jellyfin/download.html:18
+msgid ""
+"If you don't wish to Download the App feel free to use Jellyfin in your "
+"devices web browser, just click \"Next\"."
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:24
+msgid "Show Server URL"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:33
+#: app/templates/wizard/jellyfin/download.html:133
+msgid "Copy"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:47
+#: app/templates/wizard/jellyfin/download.html:64
+#: app/templates/wizard/jellyfin/tips.html:25
+msgid "Open Jellyfin"
+msgstr "Åpne Jellyfin"
+
+#: app/templates/wizard/jellyfin/download.html:81
+#, fuzzy
+msgid "Other Download"
 msgstr "Last ned"
+
+#: app/templates/wizard/jellyfin/download.html:130
+msgid "Copied!"
+msgstr ""
 
 #: app/templates/wizard/jellyfin/tips.html:4
 #, fuzzy
@@ -576,10 +632,6 @@ msgstr ""
 " Plex-programmet på din enhet, og en konto for å logge inn slik at du kan"
 " strømme media."
 
-#: app/templates/wizard/jellyfin/tips.html:25
-msgid "Open Jellyfin"
-msgstr "Åpne Jellyfin"
-
 #: app/templates/wizard/plex/download.html:3
 msgid ""
 "Join & Download Plex\n"
@@ -601,6 +653,10 @@ msgstr ""
 #: app/templates/wizard/plex/download.html:11
 msgid "Planning on watching Movies on this device? Download Plex for this device."
 msgstr "Planlegger du å se filmer på denne enheten? Last ned Plex."
+
+#: app/templates/wizard/plex/download.html:14
+msgid "Download"
+msgstr "Last ned"
 
 #: app/templates/wizard/plex/tips.html:4
 msgid "Eh, So, What is Plex exactly?"
@@ -1094,4 +1150,7 @@ msgstr ""
 
 #~ msgid "Home User"
 #~ msgstr "Inviter bruker"
+
+#~ msgid "Ombi API Key (Only used for user import currently.)"
+#~ msgstr ""
 

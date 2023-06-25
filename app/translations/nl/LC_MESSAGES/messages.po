@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2023-05-16 17:27+0100\n"
+"POT-Creation-Date: 2023-06-25 16:15+0000\n"
 "PO-Revision-Date: 2023-04-30 16:48+0000\n"
 "Last-Translator: Laurant Marijnissen <laurant@gigafyde.dev>\n"
 "Language: nl\n"
@@ -19,37 +19,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: app/admin.py:150
+#: app/admin.py:162
 msgid "Passwords do not match."
 msgstr "Wachtwoorden komen niet overeen."
 
-#: app/admin.py:153
+#: app/admin.py:165
 msgid "Username must be between 3 and 15 characters."
 msgstr "De gebruikersnaam moet tussen de 3 en 15 tekens bevatten."
 
-#: app/admin.py:156
+#: app/admin.py:168
 msgid "Password must be between 3 and 40 characters."
 msgstr "Het wachtwoord moet tussen de 3 en 40 tekens bevatten."
 
-#: app/admin.py:182
+#: app/admin.py:196
 msgid "You must select at least one library."
 msgstr "Je moet minstens één bibliotheek selecteren."
 
-#: app/admin.py:251
+#: app/admin.py:273
 msgid "It is likely that your token does not work."
 msgstr "Mogelijk werkt je toegangstoken niet."
 
-#: app/admin.py:253
+#: app/admin.py:275
 msgid "Unable to connect to your Plex server. See Logs for more information."
 msgstr ""
 "De verbinding met je Plex server is onderbroken. Bekijk de Logs voor meer"
 " informatie."
 
-#: app/admin.py:262
+#: app/admin.py:284
 msgid "Unable to connect to your Jellyfin server."
 msgstr "Er is geen verbinding mogelijk met de Jellyfin server."
 
-#: app/admin.py:343 app/admin.py:347
+#: app/admin.py:382 app/admin.py:386
 msgid "Invalid Username or Password"
 msgstr "Ongeldige gebruikersnaam of wachtwoord"
 
@@ -128,6 +128,7 @@ msgid "Server"
 msgstr "Server"
 
 #: app/templates/settings.html:48
+#: app/templates/wizard/jellyfin/download.html:29
 #, fuzzy
 msgid "Server URL"
 msgstr "Server URL"
@@ -150,18 +151,34 @@ msgstr "Plex Bibliotheken"
 msgid "Scan For Libraries"
 msgstr "Bibliotheken scannen"
 
-#: app/templates/settings.html:77
+#: app/templates/settings.html:78
 #, fuzzy
 msgid ""
 "Request\n"
-"                instance (Ombi, Overseerr...) URL"
-msgstr "URL verzoeksysteem (Ombi, Overseerr...)"
-
-#: app/templates/settings.html:87
-msgid "Ombi API Key (Only used for user import currently.)"
+"                Server"
 msgstr ""
+"Word lid van de Discord\n"
+"…………………………Server!"
 
-#: app/templates/settings.html:94
+#: app/templates/settings.html:92
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server URL"
+msgstr ""
+"Word lid van de Discord\n"
+"…………………………Server!"
+
+#: app/templates/settings.html:103
+#, fuzzy
+msgid ""
+"Request\n"
+"                Server API Key"
+msgstr ""
+"Word lid van de Discord\n"
+"…………………………Server!"
+
+#: app/templates/settings.html:111
 #, fuzzy
 msgid ""
 "Discord\n"
@@ -170,7 +187,16 @@ msgstr ""
 "Word lid van de Discord\n"
 "…………………………Server!"
 
-#: app/templates/settings.html:102
+#: app/templates/settings.html:119
+#, fuzzy
+msgid ""
+"Discord\n"
+"                Widget"
+msgstr ""
+"Word lid van de Discord\n"
+"…………………………Server!"
+
+#: app/templates/settings.html:127
 #, fuzzy
 msgid ""
 "Custom\n"
@@ -179,7 +205,7 @@ msgstr ""
 "Aangepaste\n"
 "                HTML"
 
-#: app/templates/settings.html:110
+#: app/templates/settings.html:135
 msgid "Save"
 msgstr "Opslaan"
 
@@ -392,30 +418,39 @@ msgstr " Er is iets misgelopen. Probeer later opnieuw."
 msgid "New Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:60
+#: app/templates/modals/create-notification-agent.html:61
 #, fuzzy
 msgid ""
 "Username\n"
 "                                (optional)"
 msgstr "Plex Bibliotheken"
 
-#: app/templates/modals/create-notification-agent.html:65
+#: app/templates/modals/create-notification-agent.html:66
 #, fuzzy
 msgid "Password (optional)"
 msgstr "(optioneel)"
 
-#: app/templates/modals/create-notification-agent.html:70
+#: app/templates/modals/create-notification-agent.html:72
+#, fuzzy
+msgid "User Key"
+msgstr "Gebruikersnaam"
+
+#: app/templates/modals/create-notification-agent.html:76
+msgid "API Token"
+msgstr ""
+
+#: app/templates/modals/create-notification-agent.html:81
 #, fuzzy
 msgid ""
 "Agent\n"
 "                                URL"
 msgstr "Plex Bibliotheken"
 
-#: app/templates/modals/create-notification-agent.html:81
+#: app/templates/modals/create-notification-agent.html:92
 msgid "Test & Create Agent"
 msgstr ""
 
-#: app/templates/modals/create-notification-agent.html:85
+#: app/templates/modals/create-notification-agent.html:96
 msgid "Cancel"
 msgstr ""
 
@@ -518,7 +553,7 @@ msgstr ""
 "Goed nieuws! Je hebt nu toegang tot de mediacollectie van deze server. "
 "Laten we even tonen hoe je deze gebruikt met Plex."
 
-#: app/templates/wizard/jellyfin/download.html:11
+#: app/templates/wizard/jellyfin/download.html:12
 #, fuzzy
 msgid ""
 "Planning on watching Movies on this device? Download Jellyfin for this "
@@ -527,10 +562,36 @@ msgstr ""
 "Ben je van plan om media te bekijken op dit toestel? Download dan Plex "
 "voor dit toestel."
 
-#: app/templates/wizard/jellyfin/download.html:14
-#: app/templates/wizard/plex/download.html:14
-msgid "Download"
+#: app/templates/wizard/jellyfin/download.html:18
+msgid ""
+"If you don't wish to Download the App feel free to use Jellyfin in your "
+"devices web browser, just click \"Next\"."
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:24
+#, fuzzy
+msgid "Show Server URL"
+msgstr "Server URL"
+
+#: app/templates/wizard/jellyfin/download.html:33
+#: app/templates/wizard/jellyfin/download.html:133
+msgid "Copy"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:47
+#: app/templates/wizard/jellyfin/download.html:64
+#: app/templates/wizard/jellyfin/tips.html:25
+msgid "Open Jellyfin"
+msgstr ""
+
+#: app/templates/wizard/jellyfin/download.html:81
+#, fuzzy
+msgid "Other Download"
 msgstr "Download"
+
+#: app/templates/wizard/jellyfin/download.html:130
+msgid "Copied!"
+msgstr ""
 
 #: app/templates/wizard/jellyfin/tips.html:4
 #, fuzzy
@@ -567,10 +628,6 @@ msgstr ""
 " dat je moet doen is de Plex applicatie op je toestel downloaden en "
 "inloggen met je account. Nu ben je klaar om te kijken, zo simpel is het!"
 
-#: app/templates/wizard/jellyfin/tips.html:25
-msgid "Open Jellyfin"
-msgstr ""
-
 #: app/templates/wizard/plex/download.html:3
 #, fuzzy
 msgid ""
@@ -593,6 +650,10 @@ msgid "Planning on watching Movies on this device? Download Plex for this device
 msgstr ""
 "Ben je van plan om media te bekijken op dit toestel? Download dan Plex "
 "voor dit toestel."
+
+#: app/templates/wizard/plex/download.html:14
+msgid "Download"
+msgstr "Download"
 
 #: app/templates/wizard/plex/tips.html:4
 msgid "Eh, So, What is Plex exactly?"
@@ -1079,4 +1140,12 @@ msgstr ""
 
 #~ msgid "Home User"
 #~ msgstr "Gebruiker uitnodigen"
+
+#~ msgid ""
+#~ "Request\n"
+#~ "                instance (Ombi, Overseerr...) URL"
+#~ msgstr "URL verzoeksysteem (Ombi, Overseerr...)"
+
+#~ msgid "Ombi API Key (Only used for user import currently.)"
+#~ msgstr ""
 
