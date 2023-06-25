@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: wizarrrr/wizarr
+  IMAGE_NAME: realashleybailey/wizarr
 
 jobs:
   build-and-push-image:
